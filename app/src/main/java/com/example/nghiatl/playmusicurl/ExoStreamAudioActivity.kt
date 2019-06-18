@@ -3,11 +3,7 @@ package com.example.nghiatl.playmusicurl
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.google.android.exoplayer2.DefaultLoadControl
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector
-import com.google.android.exoplayer2.DefaultRenderersFactory
-import com.google.android.exoplayer2.ExoPlayerFactory
-import com.google.android.exoplayer2.SimpleExoPlayer
 import kotlinx.android.synthetic.main.activity_exo_stream_audio.*
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory
 import com.google.android.exoplayer2.source.ExtractorMediaSource
@@ -15,6 +11,9 @@ import com.google.android.exoplayer2.source.MediaSource
 import com.google.android.exoplayer2.util.Util
 import android.annotation.SuppressLint
 import android.view.View
+import com.google.android.exoplayer2.*
+
+
 
 // https://codelabs.developers.google.com/codelabs/exoplayer-intro/#2
 class ExoStreamAudioActivity : AppCompatActivity() {
@@ -29,6 +28,17 @@ class ExoStreamAudioActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exo_stream_audio)
+
+        button_playPause.setOnClickListener {
+            mPlayer?.playWhenReady = isPlaying() != true
+        }
+    }
+
+    private fun isPlaying(): Boolean {
+        return (mPlayer != null
+                && mPlayer?.playbackState != Player.STATE_ENDED
+                && mPlayer?.playbackState != Player.STATE_IDLE
+                && mPlayer?.playWhenReady == true)
     }
 
     public override fun onStart() {
