@@ -33,6 +33,7 @@ class ExoStreamAudioActivity : AppCompatActivity() {
             mPlayer?.playWhenReady = isPlaying() != true
         }
     }
+    
 
     private fun isPlaying(): Boolean {
         return (mPlayer != null
