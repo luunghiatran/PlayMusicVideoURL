@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To Audio Player"
+        android:onClick="goAudioPlayer"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Audio Player 2"
+        android:onClick="goAudioPlayer2"
+        android:visibility="visible"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To Video Player"
+        android:onClick="goVideoPlayer"
+        android:visibility="visible"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exo Player"
+        android:onClick="goExoPlayer"
+        android:visibility="visible"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exo Audio"
+        android:onClick="goExoAudio"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exo Player Youtube"
+        android:onClick="goExoPlayerYoutube"
+        android:visibility="visible"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Youtube Player"
+        android:onClick="goYoutubePlayer"
+        android:visibility="visible"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exo Stream Audio"
+        android:onClick="goExoStreamAudio"
+        android:visibility="visible"/>
+
+</LinearLayout>

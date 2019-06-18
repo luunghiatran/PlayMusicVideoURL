@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PlayMusicURL</string>
+    <string name="error_player">Lỗi khi khởi tạo (%1$s)</string>
+</resources>
